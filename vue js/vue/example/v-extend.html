@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-extend扩展实例构造器</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1>v-extend扩展实例构造器</h1>
+    <hr>
+    <author></author>
+    <script type="text/javascript">
+        var authorURL = Vue.extend({
+            template: "<P><a :href='authorURL'>{{authorName}}</a></P>",
+            data: function() {
+                return {
+                    authorName: 'JSpang',
+                    authorURL: "http://jspang.com"
+                }
+            }
+
+        });
+
+        new authorURL().$mount("author");
+    </script>
+</body>
+
+</html>

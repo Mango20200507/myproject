@@ -1,0 +1,30 @@
+{
+  "name": "eduwork",
+  "version": "1.0.1",
+  "description": "this is eduwork project",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git "
+  },
+  "keywords": [
+    "edu",
+    "work",
+    "vue",
+    "react"
+  ],
+  "author": "liudi",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "jQuery": "^1.7.4",
+    "sg": "^0.1.0"
+  }
+}

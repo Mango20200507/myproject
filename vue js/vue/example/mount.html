@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helloword</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>mount</h1>
+    <hr>
+    <div id="app">
+
+    </div>
+    <script type="text/javascript">
+        var jspang = Vue.extend({
+            template: `<p>{{message}}</p>`,
+            data: function() {
+                return {
+                    message: "hello,i am jspang"
+                }
+            },
+
+        })
+        var vm = new jspang().$mount('#app')
+    </script>
+</body>
+
+</html>

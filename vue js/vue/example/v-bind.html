@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-bind实例</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+
+<body>
+    <h1>v-bind实例</h1>
+    <hr>
+    <div id="app">
+        <img v-bind:src="imgSrc" width="200px" alt="">
+        <div :class='className'>how are you </div>
+        <div :class="{classA:isOk}">how are you </div>
+    </div>
+    <p></p>
+
+    <style>
+        .classA {
+            color: pink;
+        }
+        
+        .classB {
+            font-size: 38px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el: "#app",
+            data: {
+                imgSrc: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=391432076,2333879031&fm=26&gp=0.jpg",
+                className: "classA",
+                isOk: "true"
+            }
+        })
+    </script>
+</body>
+
+</html>

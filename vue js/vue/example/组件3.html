@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>component-1</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1>component-1</h1>
+    <hr>
+    <div id="app">
+
+        <panpan></panpan>
+    </div>
+
+    <script type="text/javascript">
+        var city = {
+            template: `<div style="color:pink">sichuan from china</div>`,
+        }
+
+        var panpanComponent = {
+            template: `<div>
+                <p>panda from china</p>
+                <city></city>
+                </div>`,
+            components: {
+                'city': city
+            }
+        }
+        var app = new Vue({
+            el: "#app",
+            components: {
+                'panpan': panpanComponent,
+
+            }
+        });
+    </script>
+</body>
+
+</html>

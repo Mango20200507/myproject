@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helloword</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+
+<body>
+    <h1>propsdate</h1>
+    <hr>
+    <header></header>
+    <script type="text/javascript">
+        var header_a = Vue.extend({
+            template: `<p>{{message}}--{{a}}</p>`,
+            data: function() {
+                return {
+                    message: "hello,i am mango"
+                }
+            },
+            props: ['a']
+        });
+        new header_a({
+            propsData: {
+                a: 123
+            }
+        }).$mount('header')
+    </script>
+</body>
+
+</html>
